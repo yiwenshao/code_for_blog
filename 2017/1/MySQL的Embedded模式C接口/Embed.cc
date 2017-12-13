@@ -9,12 +9,12 @@ int main(){
     }
     char dir_arg[1024];
     snprintf(dir_arg, sizeof(dir_arg), "--datadir=%s", "./shadow");
-    char *mysql_av[5]=
+    char *mysql_av[4]=
     { (char*)"progname",
             (char*)"--skip-grant-tables",
             dir_arg,
             (char*)"--character-set-server=utf8",
-            (char*)"--language=/home/casualet/Desktop/cryptdb/mysql-src/build/sql/share/"
+            //(char*)"--language=/home/casualet/Desktop/cryptdb/mysql-src/build/sql/share/"
     };
     assert(0 == mysql_library_init(sizeof(mysql_av)/sizeof(mysql_av[0]),(char**) mysql_av, 0));
     assert(0 == mysql_thread_init());
